@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+body {
+	background-color: #E1B458
+}
+
+.title.name {
+	font-weight: bold;
+	padding: 0.5em 1em;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-right: 3px dashed #4c9ac0;
+	border-bottom: 3px dashed #4c9ac0;
+	outline: 3px solid #4c9ac0;
+	outline-offset: 5px;
+}
+
+/*------------------------------
+  画像付き吹き出し(会話)
+------------------------------*/
+/* 吹き出し 全体*/
+.talking {
+	margin-bottom: 2em;
+	position: relative;
+}
+
+.talking:before, .talking:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+/*アイコン*/
+.talking figure {
+	width: 80px; /*アイコンの横幅*/
+	height: 80px; /*アイコンの縦幅*/
+}
+
+.talking-left_icon {
+	float: left;
+	margin-right: 30px; /*アイコンの右の余白(左の吹き出し)*/
+}
+
+.talking-right_icon {
+	float: right;
+	margin-left: 30px; /*アイコンの左の余白(右の吹き出し)*/
+}
+
+.talking figure img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: 2px solid #aaa;
+	border-radius: 50%; /*アイコンの角丸*/
+}
+
+
+/*吹き出しのセリフ部分*/
+.talking-left, .talking-right {
+	position: relative;
+	padding: 10px;
+	border-style: solid; /*枠線の線種*/
+	border-radius: 10px; /*セリフを入れる部分の角丸*/
+	max-width: calc(100% - 80px);
+}
+
+.talking p {
+	margin: 0;
+}
+
+.talking p :last-child {
+	margin: 0;
+}
+
+/*---左の吹き出し---*/
+.talking-left {
+	float: left;
+	border-width: 2px; /*枠線の太さ*/
+	border-color: #D94F04; /*枠線の色*/
+	background: #D94F04; /*背景色*/
+}
+
+/*左の吹き出し 三角*/
+.talking-left:before {
+	position: absolute;
+	content: '';
+	border: 10px solid transparent;
+	border-right: 10px solid #D94F04; /*三角の線になる部分*/
+	top: 15px;
+	left: -22px;
+}
+
+.talking-left:after {
+	position: absolute;
+	content: '';
+	border: 10px solid transparent;
+	border-right: 10px solid lightpink #D94F04;
+	top: 15px;
+	left: -19px;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+/*
+ ボタン
+ */
+.button {
+	background: #008b8b;
+	border-radius: 50px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 280px;
+	padding: 10px 25px;
+	color: #313131;
+	transition: 0.3s ease-in-out;
+	font-weight: 500;
+}
+
+.button:hover {
+	background:#add8e6;
+	color:#000000;
+}
+
+.button:after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-top: 3px solid #313131;
+	border-right: 3px solid #313131;
+	transform: rotate(45deg) translateY(-50%);
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	border-radius: 1px;
+	transition: 0.3s ease-in-out;
+}
+
+.button:hover:after {
+	border-color:#000000;;
+}
+
+	/*
+	page3のフレーム
+	*/
+.memoflame {
+  border: 5px dashed #008080;
+
+  padding: 2em;
+  border-radius: 15px;
+}
+
+/*
+ボタンを押すと真ん中に画像が出る
+*/
+
+#myImage {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* 固定位置にすることでスクロールに関係なく表示される */
+    top: 50%; /* トップから50%の位置 */
+    left: 50%; /* 左から50%の位置 */
+    transform: translate(-50%, -50%); /* 画像の中央が実際の中央になるように調整 */
+    z-index: 1000; /* 他の要素よりも前面に表示するためのz-index */
+}

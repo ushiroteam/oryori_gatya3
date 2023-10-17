@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "シロクマフォント";
+	src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+h2 {
+	font-family: "シロクマフォント", sans-serif;
+	font-size: 50px;
+}
+
+body {
+	font-family: "シロクマフォント", sans-serif;
+	font-size: 25px;
+}

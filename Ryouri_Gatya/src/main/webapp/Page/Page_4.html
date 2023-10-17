@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/Style.css">
+<link rel="stylesheet" href="../css/Font_Style.css">
+<link rel="stylesheet" href="../css/Fade.css">
+
+<title>今日のごはんは何にしよう</title>
+<style>
+</style>
+</head>
+<h2>もう1回がちゃをしよう</h2>
+
+<body>
+	<!--吹き出し-->
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="talking fade">
+		<figure class="talking-left_icon">
+			<img src="../写真/face02.jpeg" alt="mam">
+		</figure>
+		<div class="talking-left">
+			<p>なんか微妙だったわ......</p>
+		</div>
+	</div>
+
+	<!--吹き出し終わり-->
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!--吹き出し-->
+	<div class="talking fade">
+		<figure class="talking-left_icon">
+			<img src="../写真/face02.jpeg" alt="mam">
+		</figure>
+		<div class="talking-left">
+			<p>もう一回回したらちがうかな？
+			<p>
+		</div>
+	</div>
+	<!--吹き出し終わり-->
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- ガチャの写真 -->
+
+
+	<!--吹き出し-->
+	<div class="talking fade">
+		<figure class="talking-left_icon">
+			<img src="../写真/face02.jpeg" alt="mam">
+		</figure>
+		<div class="talking-left">
+			<p>スタート★</p>
+		</div>
+	</div>
+	<!--吹き出し終わり-->
+	<br>
+	<br>
+	<br>
+	<br>
+
+<button class="button" id="showButton">ガチャを回す</button>
+	<img id="myImage" src="../写真/回転カプセル.gif" alt="Description"
+		style="display: none;">
+
+
+	<!-- ボタンを押して画像を出す -->
+	<script type="text/javascript">
+document.getElementById('showButton').addEventListener('click', function() {
+    // 画像を表示する
+    document.getElementById('myImage').style.display = 'block';
+
+    // 3秒後にページを切り替える
+    setTimeout(function() {
+        window.location.href = "../Page/Page_3.html"; // 正しい方法でページを切り替える
+    }, 5000);
+});
+</script>
+
+	<!--fade java script -->
+	<script type="text/javascript">
+const targets = document.getElementsByClassName('fade');
+for(let i = targets.length; i--;){
+ let observer = new IntersectionObserver((entries, observer) => {
+  for(let j = entries.length; j--;){
+   if (entries[j].isIntersecting) {
+    entries[j].target.classList.add('active');
+   } else{
+    entries[j].target.classList.remove('active');
+   }
+  }
+ });
+ observer.observe(targets[i]);
+}
+</script>
+</body>
+</html>
