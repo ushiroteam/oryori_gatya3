@@ -21,27 +21,29 @@ public class Dao {
 		
 		try {
 			connection = DBmanager.getConnection();
-			String SQL = "SELECT C.ryouriID,C.genreid,C.imgURL,C.dishes,A.dishes_genre,B.recipeURL,D.imgURL,D.restaurantURL FROM category AS A LEFT JOIN recipe AS B ON A.genreID= B.genreID LEFT JOIN ryouri AS C ON B.ryouriID= C.ryouriID LEFT JOIN ryouri AS C ON C.ryouriID= D.ryouriID LEFT JOIN restaurant AS D ON C.ryouriID = D.ryouriID order by RAND() LIMIT 1;";
+			String SQL = "SELECT C.ryouriID,C.genreid,C.imgURL,C.dishes,A.dishes_genre,B.recipeURL,D.imgURL,D.restaurantURL FROM category AS A LEFT JOIN recipe AS B ON A.genreID= B.genreID LEFT JOIN ryouri AS C ON B.ryouriID= C.ryouriID LEFT JOIN restaurant AS D ON C.ryouriID = D.ryouriID order by RAND() LIMIT 1;";
+			System.out.println("a");
 			
 			statement = connection.prepareStatement(SQL);
+			System.out.println("b");
 			resultSet = statement.executeQuery();
-			
+			System.out.println("c");
 			list = new ArrayList<>();
-			while(resultSet.next()) {
+			resultSet.next();
 				GatyaUser user = new GatyaUser();
 					user.setRyouriID(resultSet.getNString("C.ryouriID"));
+					System.out.println(resultSet.getNString("C.ryouriID"));
 					user.setGenreID(resultSet.getNString("C.genreID"));
 					user.setRyouri_imgURL(resultSet.getNString("C.imgURL"));
 					user.setDishes(resultSet.getNString("C.dishes"));
 					user.setDishes_genre(resultSet.getNString("A.dishes_genre"));
 					user.setRecipeURL(resultSet.getNString("B.recipeURL"));
 					user.setRestaurant_imgURL(resultSet.getNString("D.imgURL"));
-					user.setRestaurantURL(resultSet.getNString("restaurantURL"));
+					user.setRestaurantURL(resultSet.getNString("D.restaurantURL"));
 				list.add(user);
-			}
+			
 			
 		} catch (ClassNotFoundException | SQLException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
     	}finally {
 		DBmanager.close(resultSet);

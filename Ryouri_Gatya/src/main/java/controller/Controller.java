@@ -21,14 +21,15 @@ public class Controller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("サーブレット実行中");
+//		System.out.println("サーブレット実行中");
 		List<GatyaUser> list = new ArrayList<>();
 		list = Dao.selectryouri();
+		System.out.println(list.get(0));
 		
 		request.setAttribute("list", list);
-		
-		request.getRequestDispatcher("WEB-INF/JSP/gatya.jsp").forward(request, response);
-		
+		System.out.println("e");
+		request.getRequestDispatcher("/WEB-INF/jsp/gatya.jsp").forward(request, response);
+		System.out.println("f");
 	}
 
 	

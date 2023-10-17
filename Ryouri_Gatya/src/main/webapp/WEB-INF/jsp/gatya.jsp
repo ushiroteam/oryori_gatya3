@@ -47,7 +47,7 @@
 	<br>
 	<!-- ここにホットペッパーのリンクをのっける -->
 	<br>
-	<a href="<%= gatya.getRestaurantURL() %>">店の名前</a>
+	<a href="<%= gatya.getRestaurantURL() %>"></a>
 	<br>
 	
 	</div>
