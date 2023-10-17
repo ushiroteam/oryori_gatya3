@@ -6,9 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/Style.css">
-<link rel="stylesheet" href="../css/Font_Style.css">
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/Style.css">
+<link rel="stylesheet" href="css/Font_Style.css">
+<link rel="stylesheet" href="css/Fade.css">
 <title>今日のごはんは何にしよう</title>
 </head>
 <body>
@@ -54,7 +55,7 @@
 	<%} %>
 	<!-- ここにボタン -->
 	<br>
-	<form action="Page_4.html">
+	<form action="Page/Page_4.html">
 		<button class="button" type="submit" name="button" value="button">
 			 <b>違うのがいい～</b>
 			
@@ -68,7 +69,7 @@
 </button>
 	<br>
 
-	<form action="Page_1.html">
+	<form action="Page/Page_1.html">
 		<button class="button" type="submit" name="button" value="button">
 			 <b>TOPに戻る</b>
 			
