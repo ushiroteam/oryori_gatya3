@@ -85,24 +85,25 @@
 	<br>
 	<br>
 
-	<!-- サーブレットに飛ぶためにformタグを追加した、下のタイムアウトメソッドが意味がなくなっている --> 
-    <form action="../controller/Controller.java" method="get">
-	<button class="button" id="showButton">ガチャを回す</button>
-	<img id="myImage" src="../写真/回転カプセル.gif" alt="Description"
-		style="display: none;" width="400px">
-	</form>
-	<!-- ボタンを押して画像を出す -->
-	<script type="text/javascript">
-document.getElementById('showButton').addEventListener('click', function() {
-    // 画像を表示する
-    document.getElementById('myImage').style.display = 'block';
+	 <button class="button" id="showButton">ガチャを回す</button>
+    <img id="myImage" src="../写真/回転カプセル.gif" alt="ガチャ画像" style="display: none;" width="400px">
+    
+    <script type="text/javascript">
+        document.getElementById('showButton').addEventListener('click', function() {
+            // 画像を表示する
+            document.getElementById('myImage').style.display = 'block';
 
-    // 3秒後にページを切り替える
-    setTimeout(function() {
-        window.location.href = "../Page/Page_3.html"; // 正しい方法でページを切り替える
-    }, 5000);
-});
-</script>
+            // 3秒後にフォームを送信する
+            setTimeout(function() {
+                // フォームを送信
+                var form = document.createElement('form');
+                form.action = "../controller/Controller.java";
+                form.method = "get";
+                document.body.appendChild(form);
+                form.submit();
+            }, 3000);
+        });
+    </script>
 
 	<!-- フェードするふわっと --> 
 	<script type="text/javascript">
