@@ -71,20 +71,25 @@
 
 <button class="button" id="showButton">ガチャを回す</button>
 	<img id="myImage" src="../写真/回転カプセル.gif" alt="Description"
-		style="display: none;">
+		style="display: none; " width="400px">
 
 
 	<!-- ボタンを押して画像を出す -->
 	<script type="text/javascript">
-document.getElementById('showButton').addEventListener('click', function() {
+	document.getElementById('showButton').addEventListener('click', function() {
     // 画像を表示する
-    document.getElementById('myImage').style.display = 'block';
+   	 document.getElementById('myImage').style.display = 'block';
 
     // 3秒後にページを切り替える
-    setTimeout(function() {
-        window.location.href = "../WEB-INF/jsp/gatya.jsp"; // 正しい方法でページを切り替える
-    }, 5000);
-});
+   	 setTimeout(function() {
+        // フォームを送信
+   	     var form = document.createElement('form');
+  	      form.action = "../Controller";
+  	      form.method = "get";
+  	      document.body.appendChild(form);
+  	      form.submit();
+	    }, 3000);
+	});
 </script>
 
 	<!--fade java script -->

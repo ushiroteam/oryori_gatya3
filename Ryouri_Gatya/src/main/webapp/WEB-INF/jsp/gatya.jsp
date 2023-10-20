@@ -25,7 +25,7 @@
 	<div class="memoflame">
 
 	<!-- ここに楽天レシピの写真を表示させる（DBのURLから呼び出し） -->
-	<img src="<%= gatya.getRyouri_imgURL() %>"
+	<img src=" gatya.getRyouri_imgURL() "
 		alt="recipeID" width="400" height="300">
 	<br>
 	<!-- ここに楽天レシピのリンクをのっける（URL)  -->
@@ -42,7 +42,7 @@
 	
 	<!-- ここにホットペッパーの写真をのっける -->
 	<img
-		src="<%= gatya.getRestaurant_imgURL() %>"
+		src='<%= gatya.getRestaurant_imgURL()%>'
 		alt="hotpepperID" width="400" height="300">
 	<br>
 	<br>

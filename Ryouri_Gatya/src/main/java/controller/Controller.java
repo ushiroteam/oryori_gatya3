@@ -21,10 +21,14 @@ public class Controller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		System.out.println("サーブレット実行中");
+		System.out.println("サーブレット実行中");
 		List<GatyaUser> list = new ArrayList<>();
 		list = Dao.selectryouri();
 		System.out.println(list.get(0));
+		
+//		System.out.println(list.get(3));
+		
+//		Session session =((GatyaUser) list).getRestaurant_imgURL();
 		
 		request.setAttribute("list", list);
 		System.out.println("e");
