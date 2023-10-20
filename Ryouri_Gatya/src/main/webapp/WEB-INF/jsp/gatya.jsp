@@ -42,7 +42,7 @@
 	
 	<!-- ここにホットペッパーの写真をのっける -->
 	<img
-		src='<%= gatya.getRestaurant_imgURL()%>'
+		src="<%= gatya.getRestaurant_imgURL()%>"
 		alt="hotpepperID" width="300" height="300">
 	<br>
 	<br>
