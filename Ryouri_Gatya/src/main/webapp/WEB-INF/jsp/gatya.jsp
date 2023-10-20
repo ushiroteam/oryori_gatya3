@@ -14,19 +14,19 @@
 </head>
 <body>
 <%
- List<GatyaUser> list = (List<GatyaUser>)request.getAttribute("list");
+ List<GatyaUser> list = (List<GatyaUser>)session.getAttribute("user");
  for(int i = 0; i<list.size(); i++){
 	 GatyaUser gatya = list.get(i);
 %>
 	<br>
 	<br>
-	<img class="img" alt="ガチャ" src="../写真/Obachan.gif" width="300px">
+	<img class="img" alt="ガチャ" src="写真/obachan.gif" width="300px">
 	<br>
 	<div class="memoflame">
 
 	<!-- ここに楽天レシピの写真を表示させる（DBのURLから呼び出し） -->
-	<img src=" gatya.getRyouri_imgURL() "
-		alt="recipeID" width="400" height="300">
+	<img src=" <%= gatya.getRyouri_imgURL() %> "
+		alt="recipeID" width="300" height="300">
 	<br>
 	<!-- ここに楽天レシピのリンクをのっける（URL)  -->
 	<a href="<%= gatya.getRecipeURL() %>"><%= gatya.getDishes() %></a>
@@ -43,7 +43,7 @@
 	<!-- ここにホットペッパーの写真をのっける -->
 	<img
 		src='<%= gatya.getRestaurant_imgURL()%>'
-		alt="hotpepperID" width="400" height="300">
+		alt="hotpepperID" width="300" height="300">
 	<br>
 	<br>
 	<!-- ここにホットペッパーのリンクをのっける -->
