@@ -21,8 +21,12 @@
 	<br>
 	<br>
 	<img class="img" alt="ガチャ" src="写真/obachan.gif" width="300px">
+	
+	<div class="balloon_1">これはどう？</div>
+	
+	
 	<br>
-	<div class="memoflame">
+	<div class="memoflame" style="text-align: center;">
 
 	<!-- ここに楽天レシピの写真を表示させる（DBのURLから呼び出し） -->
 	<img src=" <%= gatya.getRyouri_imgURL() %> "
@@ -34,11 +38,12 @@
 	<br>
 	<br>
 	<br>
-	<div class="balloon_1">またはこれはどう？？？？</div>
+	
+	<div class="balloon_1">つくるの面倒だから.........</div>
 	
 	<br>
 	
-	<div class="memoflame">
+	<div class="memoflame" style="text-align: center;">
 	
 	<!-- ここにホットペッパーの写真をのっける -->
 	<img
@@ -48,7 +53,7 @@
 	<br>
 	<!-- ここにホットペッパーのリンクをのっける -->
 	<br>
-	<a href="<%= gatya.getRestaurantURL() %>">レストラン</a>
+	<a href="<%= gatya.getRestaurantURL() %>">面倒だからここのお店へ行く</a>
 	<br>
 	
 	</div>
