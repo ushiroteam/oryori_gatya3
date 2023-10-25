@@ -12,7 +12,7 @@ import manager.DBmanager;
 
 public class DBDao {
 	
-	public static List<GachaDB> importGacha(){
+	public static List<GachaDB> UpdateGacha(){
 		
 		Connection connection = null;
 		ResultSet resultSet = null;

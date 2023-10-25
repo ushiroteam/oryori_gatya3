@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/Style.css">
 <link rel="stylesheet" href="css/Font_Style.css">
 <link rel="stylesheet" href="css/Fade.css">
-<title>今日のごはんは何にしよう</title>
+<title>これだーー！</title>
 </head>
 <body>
 <%
@@ -68,15 +68,15 @@
 	</form>
 	<br>
 	
-//<button class="button displayText" type="submit" name="button" value="button" onclick="alert('やったね')">
-//<b>気に入った</b>
-//</button>
+<!-- <button class="button displayText" type="submit" name="button" value="button" onclick="alert('やったね')">
+<b>気に入った</b>
+</button> -->
 
 	<button class="button displayText" type="button" name="button"
 		value="button"
-		onclick="if(confirm('ゲームする？')){window.location.href='urlを入れる';}">
+		onclick="if(confirm('ゲームする？')){window.location.href='Page/GameSelect.html';}">
 		<b>気に入った</b>
-	</button> //テストしてないからあってるか不明
+	</button> <!-- テストしてないからあってるか不明 -->
 	<br>
 
 	<form action="Page/Page_1.html">
