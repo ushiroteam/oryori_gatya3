@@ -68,10 +68,15 @@
 	</form>
 	<br>
 	
+//<button class="button displayText" type="submit" name="button" value="button" onclick="alert('やったね')">
+//<b>気に入った</b>
+//</button>
 
-	<button class="button displayText" type="submit" name="button" value="button" onclick="alert('やったね')">
-    <b>気に入った</b>
-</button>
+	<button class="button displayText" type="button" name="button"
+		value="button"
+		onclick="if(confirm('ゲームする？')){window.location.href='urlを入れる';}">
+		<b>気に入った</b>
+	</button> //テストしてないからあってるか不明
 	<br>
 
 	<form action="Page/Page_1.html">
