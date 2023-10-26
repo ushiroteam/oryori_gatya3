@@ -7,40 +7,43 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import bean.GachaDB;
+import bean.Ryouri;
 import manager.DBmanager;
 
-public class DBDao {
-	
-	public static List<GachaDB> UpdateGacha(){
-		
+public class UpdateRyouri {
+
+	public static List<Ryouri> Updatesecond() {
 		Connection connection = null;
 		ResultSet resultSet = null;
-		List<GachaDB> list = new ArrayList<>();
-		String SQL ="INSET INTO category? VALUES ( ?, ? );";
+		List<Ryouri> list2 = new ArrayList<>();
+
+		String SQL2 = "INSERT INTO ryouri? VALUES (?,?,?,?);";
+
 		try {
 			connection = DBmanager.getConnection();
-			
-			try (PreparedStatement statement= connection.prepareStatement(SQL)){
+
+			try (PreparedStatement statement = connection.prepareStatement(SQL2)) {
+
 				resultSet = statement.executeQuery();
-				
 				resultSet.next();
-			
-				GachaDB db = new GachaDB();
-					statement.setString(0, "");
-					statement.setString(1, "");
-				
-			
-			list.add(db);
+
+				Ryouri db2 = new Ryouri();
+				statement.setString(0, "");
+				statement.setString(1, "");
+				statement.setString(2, "");
+				statement.setString(3, "");
+
+				list2.add(db2);
+
+			} catch (SQLException ex1) {
+				ex1.printStackTrace();
 			}
+
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
-		}finally {
-			
 		}
-		
-		
-		return list;
+
+		return list2;
 	}
 }
