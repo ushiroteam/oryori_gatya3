@@ -25,13 +25,13 @@ public class AdminController extends HttpServlet {
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 		
+		HttpSession session = request.getSession();
+		session.setAttribute("name", name);
+		session.setAttribute("pass", pass);
+		
 		if((name.equals("西牧")||name.equals("巌")||name.equals("鈴木"))&&pass.equals("1234")){
 			
-			HttpSession session = request.getSession();
-			session.setAttribute("name", name);
-			session.setAttribute("pass", pass);
-			
-			request.getRequestDispatcher("WEB-INF/jsp/SelectTable.jsp").forward(request, response);
+			request.getRequestDispatcher("WEB-INF/jsp/Admin.jsp").forward(request, response);
 		
 		}else {
 			

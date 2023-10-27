@@ -5,14 +5,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/Style.css">
+<link rel="stylesheet" href="css/Font_Style.css">
+<link rel="stylesheet" href="css/Fade.css">
 <title>Insert title here</title>
 </head>
 <body>
 <%
-String name = request.getParameter("name");
-String pass = request.getParameter("pass");
+String name = (String)session.getAttribute("name");
+String pass = (String)session.getAttribute("pass");
 %>
-	<h2><% request.getAttribute("name"); %>さん管理者ページへようこそ</h2>
-	<c:redirect src=""></c:redirect>
+	<h2><%= name %>さん管理者ページへようこそ</h2>
+	<br>
+	<form action="InsertTable" method="post">
+		<button class="button">管理者ページへ</button>
+	 </form>
 </body>
 </html>

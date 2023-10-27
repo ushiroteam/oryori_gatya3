@@ -17,6 +17,7 @@ public class UpdateCategory {
 		Connection connection = null;
 		ResultSet resultSet = null;
 		List<Category> list1 = new ArrayList<>();
+//		Scanner scan = new Scanner("");
 //		List<Ryouri> list2 = new ArrayList<>();
 //		List<Recipe> list3 = new ArrayList<>();
 //		List<Restaurant> list4 = new ArrayList<>();
