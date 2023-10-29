@@ -71,6 +71,13 @@
 	}%>
 	
 	 <a href="Page/player.html">もう一回</a>
+	 <br>
+	 <form action="Page/Page_1.html">
+		<button class="button" type="submit" name="button" value="button">
+			 <b>TOPに戻る</b>
+			
+		</button>
+	</form>
 
 </body>
 </html>
