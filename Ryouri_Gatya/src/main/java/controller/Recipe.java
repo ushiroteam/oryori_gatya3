@@ -9,18 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class dbcontroller
+ * Servlet implementation class Recipe
  */
-@WebServlet("/DbController")
-public class DbController extends HttpServlet {
+@WebServlet("/Recipe")
+public class Recipe extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		if(){
-//	}
-		System.out.println("データベースに正常に追加されました");
-		request.getRequestDispatcher("WEB-INF/jsp/SuccessInsert.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/jsp/Recipe.jsp").forward(request, response);
 	}
 
 }

@@ -17,8 +17,7 @@ public class InsertTable extends HttpServlet {
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		request.getRequestDispatcher("WEB-INF/jsp/SelectTable.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/jsp/Category.jsp").forward(request, response);
 	}
 
 }

@@ -7,13 +7,16 @@
 <link rel="stylesheet" href="css/Style.css">
 <link rel="stylesheet" href="css/Font_Style.css">
 <link rel="stylesheet" href="css/Fade.css">
-<title>カテゴリー</title>
+<title>レシピ</title>
 </head>
 <body>
-<div align="center"><h1>テーブルに追加する項目を記入してください</h1></div>
+<div align="center"><h3>追加するRecipeテーブルの全てのエンティティに記入してください</h3></div>
 <br>
 <br>
-<input type="text">
-<br>
+<form action="Restaurant" method="post">
+ <input type="text">
+ <br>
+ <button class="button">次へ</button>
+</form>
 </body>
 </html>
