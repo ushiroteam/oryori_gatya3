@@ -72,9 +72,9 @@
 	
 	 <a href="Page/player.html">もう一回</a>
 	 <br>
-	 <form action="Page/Page_1.html">
+	 <form action="Page/GameSelect.html">
 		<button class="button" type="submit" name="button" value="button">
-			 <b>TOPに戻る</b>
+			 <b>ゲーム選択画面へ</b>
 			
 		</button>
 	</form>
