@@ -2,29 +2,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <link rel="stylesheet" href="../css/Style.css">
 <link rel="stylesheet" href="../css/Font_Style.css">
-
-<title>お料理ガチャ</title>
+<title>今日のごはんは何にしよう</title>
+<script type="text/javascript">
+ var audio = document.getElementId("audio").play();
+ audio.loop();
+ audio.muted();
+</script>
 <style type="text/css">
 </style>
 </head>
-<h2 class=title.name>ごはん決めガチャガチャ</h2>
+<header>
+<br>
+	<h2 class=title.name>ごはん決めガチャガチャ</h2>
+
+
+</header>
 <body>
+<audio src="../bgm/4.ぽかぽか散歩道.mp3" autoplay id="audio">
+</audio>
 	<div align="center"></div>
-	<img class="img" alt="ガチャ" src="../写真/newGACHA.gif"  >
+	<img class="img" alt="ガチャ" src="../写真/newGACHA.gif">
 	<br>
 	<div align="center">
 
 		<!-- スタートボタン -->
 		<form action="../Page/Page_2.html">
 			<button type="submit" class="button" name="button1" value="b1">
-			<b>今日はなにつくろう？？</b> <br> <br>
+				<b>今日はなにつくろう？？</b> <br> <br>
+			</button>
+		</form>
+	</div>
+	<br>
+	<br>
 
-			
+
+		<form action="Admin.html" style="text-align: right;">
+			<button type="submit" class="button" name="button1" value="b1">
+				<b>管理者ページにいく</b>
 			</button>
 		</form>
 
-	</div>
 </body>
 </html>

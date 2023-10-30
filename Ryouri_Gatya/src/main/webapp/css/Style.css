@@ -3,7 +3,6 @@
 body {
 	background-color: #E1B458
 }
-
 .title.name {
 	font-weight: bold;
 	padding: 0.5em 1em;
@@ -110,7 +109,7 @@ body {
  ボタン
  */
 .button {
-	background: #008b8b;
+	background: #cd5c5c;
 	border-radius: 50px;
 	position: relative;
 	display: flex;
@@ -125,7 +124,7 @@ body {
 }
 
 .button:hover {
-	background:#add8e6;
+	background:#ff6347;
 	color:#000000;
 }
 
@@ -146,6 +145,50 @@ body {
 .button:hover:after {
 	border-color:#000000;;
 }
+
+/*
+ボタン２
+*/
+
+.button1 {
+	background: #008b8b;
+	border-radius: 50px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 280px;
+	padding: 10px 25px;
+	color: #313131;
+	transition: 0.3s ease-in-out;
+	font-weight: 500;
+}
+
+
+
+.button1:hover {
+	background:#add8e6;
+	color:#000000;
+}
+
+.button1:after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-top: 3px solid #313131;
+	border-right: 3px solid #313131;
+	transform: rotate(45deg) translateY(-50%);
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	border-radius: 1px;
+	transition: 0.3s ease-in-out;
+}
+
+.button1:hover:after {
+	border-color:#000000;;
+}
+
 
 	/*
 	page3のフレーム

@@ -10,6 +10,10 @@
 <title>カテゴリー</title>
 </head>
 <body>
-<div align="center"><h2>カテゴリーテーブルです</h2></div>
+<div align="center"><h1>テーブルに追加する項目を記入してください</h1></div>
+<br>
+<br>
+<input type="text">
+<br>
 </body>
 </html>
